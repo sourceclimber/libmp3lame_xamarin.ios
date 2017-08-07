@@ -1,4 +1,4 @@
-#Build the libmp3lame original source code (on Mac)
+# Build the libmp3lame original source code (on Mac)
 First, we need to compile the original libmp3lame sources for the architectures used by the different iOS platforms.
 
 1. Extract the original lame sources (lame-3.99.5.tar.gz).
@@ -6,7 +6,7 @@ First, we need to compile the original libmp3lame sources for the architectures 
 3. Execute the build script to create the librirys for ios.
 4. The created librarys for the different platforms are in the builds folder.
 
-#Build the objective c wrapper (in XCode on Mac)
+# Build the objective c wrapper (in XCode on Mac)
 In the next step we create an Objective-C wrapper around the methods of the lame library we want to use.
 
 1. Add the libmp3lame library created from the original sources to the project.
@@ -18,7 +18,7 @@ In the next step we create an Objective-C wrapper around the methods of the lame
 sharpie bind -o . -sdk iphoneos9.2 ./include/Mp3Lame/Mp3Lame.h
 ```
 
-#Build the C# bindings (in Visual Studio on Windows)
+# Build the C# bindings (in Visual Studio on Windows)
 Finally, we create a bindings library in C# to use the Objective-C methods we created in the second step.
 
 1. Add the library createt with xcode (in step two, 'libMp3Lame.a') to the Bindings Library Project.
